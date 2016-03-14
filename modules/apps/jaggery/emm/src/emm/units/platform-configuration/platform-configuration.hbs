@@ -5,10 +5,10 @@
             <div id="config-save-form" class="container col-centered wr-content">
                 <br>
                 <h1 class="page-sub-title">
-                    Platform Configurations
+                    平台配置
                 </h1>
                 <br>
-                General and Platform Specific Server Settings for the Tenant
+                常规配置和特定配置
                 <br>
                 <br>
                 <div class="wr-advance-operations">
@@ -18,7 +18,7 @@
                                 <span class="wr-hidden-operations-icon fw-stack">
                                     <i class="fw fw-settings fw-stack-2x"></i>
                                 </span>
-                                General Configurations
+                                常规配置
                             </a>
                             {{#each types}}
                                 {{#equal name "android"}}
@@ -26,7 +26,7 @@
                                         <span class="wr-hidden-operations-icon fw-stack">
                                             <i class="fw fw-android fw-stack-2x"></i>
                                         </span>
-                                        Android Configurations
+                                        Android 配置
                                     </a>
                                 {{/equal}}
                                 {{#equal name "ios"}}
@@ -34,7 +34,7 @@
                                         <span class="wr-hidden-operations-icon fw-stack">
                                             <i class="fw fw-apple fw-stack-2x"></i>
                                         </span>
-                                        iOS Configurations
+                                        iOS 配置
                                     </a>
                                 {{/equal}}
                                 {{#equal name "windows"}}
@@ -42,7 +42,7 @@
                                         <span class="wr-hidden-operations-icon fw-stack">
                                             <i class="fw fw-windows fw-stack-2x"></i>
                                         </span>
-                                        Windows Configurations
+                                        Windows 配置
                                     </a>
                                 {{/equal}}
                             {{/each}}
@@ -57,23 +57,23 @@
                                             <i class="icon fw fw-error"></i><span></span>
                                         </div>
                                         <h4>
-                                            Policy Compliance Monitoring
+                                            策略监控
                                             <hr>
                                         </h4>
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="config-frequency">
-                                                Compliance Monitoring Time Interval
-                                                <span class="helper" title="Time Interval after which EMM server will contact devices and monitor the compliance of policies applied to them">
+                                                策略监控周期
+                                                <span class="helper" title="MDM服务器监控移动设备的周期">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                                 <br>
-                                                ( Should be in seconds )
+                                                ( 秒 )
                                             </label>
-                                            <input id="monitoring-config-frequency" type="text" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="monitoring-config-frequency" type="text" class="form-control" placeholder="[ 必填 ]">
                                         </div>
                                         <div class="wr-input-control wr-btn-grp">
                                             <button id="save-general-btn" class="wr-btn">
-                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;保存&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             </button>
                                         </div>
                                     </div>
@@ -156,13 +156,13 @@
                                             <i class="icon fw fw-error"></i><span></span>
                                         </div>
                                         <h4>
-                                            Communication Protocol Configuration
+                                            通信协议配置
                                             <hr>
                                         </h4>
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="android-config-notifier">
-                                                Type of Communication
-                                                <span class="helper" title="Communication method of android agent to contact EMM server">
+                                                通信类型
+                                                <span class="helper" title="MDM服务器与Android客户端的通信类型">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
@@ -175,14 +175,14 @@
                                         <div id="local-inputs">
                                             <div class="wr-input-control">
                                                 <label class="wr-input-label" for="android-config-notifier-frequency">
-                                                    Polling Interval
-                                                    <span class="helper" title="Time interval after which Android agent will contact EMM server each time to fetch data">
+                                                    轮询周期
+                                                    <span class="helper" title="Android客户端询问MDM服务器的周期">
                                                         <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                     </span>
                                                     <br>
-                                                    ( Should be in seconds )
+                                                    ( 秒 )
                                                 </label>
-                                                <input id="android-config-notifier-frequency" type="text" class="form-control" placeholder="[ Required Field ]">
+                                                <input id="android-config-notifier-frequency" type="text" class="form-control" placeholder="[ 必填 ]">
                                             </div>
                                         </div>
 
@@ -194,7 +194,7 @@
                                                         <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                     </span>
                                                 </label>
-                                                <input id="android-config-gcm-api-key" type="text" class="form-control" placeholder="[ Required Field ]">
+                                                <input id="android-config-gcm-api-key" type="text" class="form-control" placeholder="[ 必填 ]">
                                             </div>
 
                                             <div class="wr-input-control">
@@ -204,11 +204,11 @@
                                                         <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                     </span>
                                                 </label>
-                                                <input id="android-config-gcm-sender-id" type="text" class="form-control" placeholder="[ Required Field ]">
+                                                <input id="android-config-gcm-sender-id" type="text" class="form-control" placeholder="[ 必填 ]">
                                             </div>
                                         </div>
                                         <h4>
-                                            End User License Agreement ( EULA )
+                                            终端用户许可协议 ( EULA )
                                             <hr>
                                         </h4>
 
@@ -216,7 +216,7 @@
                                             <textarea id="android-eula" type="text" class="form-control"></textarea>
                                         </div>
                                         <div class="wr-input-control wr-btn-grp">
-                                            <button id="save-android-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                            <button id="save-android-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;保存&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                         </div>
                                     </div>
                                 </div>
@@ -231,7 +231,7 @@
                                             <i class="icon fw fw-error"></i><span></span>
                                         </div>
                                         <h4>
-                                            iOS SCEP Certificate Configurations
+                                            iOS SCEP 证书配置
                                             <hr>
                                         </h4>
                                         <div id="ios-scep-config-error-msg" class="alert alert-danger hidden" role="alert">
@@ -240,56 +240,56 @@
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-country">
-                                                Country (C)
-                                                <span class="helper" title="Country code (ex: LK, US)">
+                                                国家 (C)
+                                                <span class="helper" title="国家缩写 (例: LK, US)">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
-                                            <input id="ios-config-country" type="text" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-country" type="text" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-state">
-                                                State (ST)
-                                                <span class="helper" title="State">
+                                                州 (ST)
+                                                <span class="helper" title="州">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
-                                            <input id="ios-config-state" type="text" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-state" type="text" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-locality">
-                                                Locality (L)
-                                                <span class="helper" title="Locality">
+                                                地址 (L)
+                                                <span class="helper" title="地址">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
-                                            <input id="ios-config-locality" type="text" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-locality" type="text" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-organization">
-                                                Organization (O)
-                                                <span class="helper" title="Organization Name">
+                                                组织 (O)
+                                                <span class="helper" title="组织名称">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
-                                            <input id="ios-config-organization" type="text" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-organization" type="text" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-organization-unit">
-                                                Organization Unit (OU)
-                                                <span class="helper" title="Organization Unit">
+                                                组织单位 (OU)
+                                                <span class="helper" title="组织单位">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
-                                            <input id="ios-config-organization-unit" type="text" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-organization-unit" type="text" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <h4>
-                                            iOS Profile Configurations
+                                            iOS Profile 配置
                                             <hr>
                                         </h4>
 
@@ -298,16 +298,16 @@
                                         </div>
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-org-display-name">
-                                                Organization Display Name
-                                                <span class="helper" title="Organization display name">
+                                                组织名称
+                                                <span class="helper" title="组织名称">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
-                                            <input id="ios-org-display-name" type="text" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-org-display-name" type="text" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <h4>
-                                            iOS MDM Configurations
+                                            iOS MDM 配置
                                             <hr>
                                         </h4>
 
@@ -316,39 +316,39 @@
                                         </div>
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-mdm-certificate">
-                                                MDM Certificate
-                                                <span class="helper" title="Upload MDM Certificate">
+                                                MDM证书
+                                                <span class="helper" title="上传MDM证书">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label><br>
                                             <label class="wr-input-label" id="mdm-cert-file-name">
                                             </label>
-                                            <input id="ios-config-mdm-certificate" type="file" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-mdm-certificate" type="file" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-mdm-certificate-password">
-                                                MDM Certificate Password
-                                                <span class="helper" title="MDM Certificate Password">
+                                                MDM证书密码
+                                                <span class="helper" title="MDM证书密码">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
-                                            <input id="ios-config-mdm-certificate-password" type="password" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-mdm-certificate-password" type="password" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-mdm-certificate-topic-id">
-                                                MDM Certificate Topic ID
-                                                <span class="helper" title="MDM Certificate Topic ID">
+                                                MDM证书 Topic ID
+                                                <span class="helper" title="MDM证书 Topic ID">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
-                                            <input id="ios-config-mdm-certificate-topic-id" type="text" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-mdm-certificate-topic-id" type="text" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-mdm-mode">
-                                                Mode
+                                                模式
                                                 <span class="helper" title="Release mode">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
@@ -360,7 +360,7 @@
                                         </div>
 
                                         <h4>
-                                            iOS APNS Configurations
+                                            iOS APNS配置
                                             <hr>
                                         </h4>
 
@@ -369,29 +369,29 @@
                                         </div>
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-apns-certificate">
-                                                APNS Certificate
-                                                <span class="helper" title="Upload APNS Certificate">
+                                                APNS证书
+                                                <span class="helper" title="上传APNS证书">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label><br>
                                             <label class="wr-input-label" id="apns-cert-file-name">
                                             </label>
-                                            <input id="ios-config-apns-certificate" type="file" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-apns-certificate" type="file" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-apns-certificate-password">
-                                                APNS Certificate Password
-                                                <span class="helper" title="APNS Certificate Password">
+                                                APNS证书密码
+                                                <span class="helper" title="APNS证书密码">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
                                             </label>
-                                            <input id="ios-config-apns-certificate-password" type="password" class="form-control" placeholder="[ Required Field ]">
+                                            <input id="ios-config-apns-certificate-password" type="password" class="form-control" placeholder="[ 必填 ]">
                                         </div>
 
                                         <div class="wr-input-control">
                                             <label class="wr-input-label" for="ios-config-apns-mode">
-                                                Mode
+                                                模式
                                                 <span class="helper" title="Release mode">
                                                     <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                 </span>
@@ -403,7 +403,7 @@
                                         </div>
 
                                         <h4>
-                                            End User License Agreement (EULA)
+                                            终端用户许可协议 (EULA)
                                             <hr>
                                         </h4>
 
@@ -411,7 +411,7 @@
                                             <textarea id="ios-eula" type="text" class="form-control"></textarea>
                                         </div>
                                         <div class="wr-input-control wr-btn-grp">
-                                            <button id="save-ios-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                            <button id="save-ios-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;保存&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                         </div>
                                     </div>
                                 </div>
@@ -426,31 +426,31 @@
                                             <i class="icon fw fw-error"></i><span></span>
                                         </div>
                                         <h4>
-                                            Device Polling Configuration
+                                            设备轮询配置
                                             <hr>
                                         </h4>
                                         <div id="local-inputs">
                                             <div class="wr-input-control">
                                                 <label class="wr-input-label" for="windows-config-notifier-frequency">
-                                                    Polling Interval
-                                                    <span class="helper" title="Time interval after which windows agent will contact EMM server each time to fetch data">
+                                                    轮询周期
+                                                    <span class="helper" title="Windows客户端询问MDM服务器的周期">
                                                         <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                                                     </span>
                                                     <br>
-                                                    ( Should be in seconds )
+                                                    ( 秒 )
                                                 </label>
-                                                <input id="windows-config-notifier-frequency" type="text" class="form-control" placeholder="[ Required Field ]">
+                                                <input id="windows-config-notifier-frequency" type="text" class="form-control" placeholder="[ 必填 ]">
                                             </div>
                                         </div>
                                         <h4>
-                                            End User License Agreement ( EULA )
+                                            终端用户许可协议 ( EULA )
                                             <hr>
                                         </h4>
                                         <div class="wr-input-control">
                                             <textarea id="windows-eula" type="text" class="form-control"></textarea>
                                         </div>
                                         <div class="wr-input-control wr-btn-grp">
-                                            <button id="save-windows-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                            <button id="save-windows-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;保存&nbsp;&nbsp;&nbsp;&nbsp;</button>
                                         </div>
                                     </div>
                                 </div>
@@ -463,13 +463,13 @@
 
             <div id="record-created-msg" class="container col-centered wr-content hidden">
                 <div class="wr-form">
-                    <p class="page-sub-title">Configuration was saved successfully.</p>
+                    <p class="page-sub-title">配置保存成功</p>
                     <br>
-                    <br>Please click <b>"Go back to configurations"</b>, if you wish to save another configuration or click
-                    <b>"Exit"</b> to complete the process and go back to the dashboard.
+                    <br>其它配置，请点击 <b>"返回"</b>
+                        返回主面板，请点击<b>"退出"</b>
                     <hr />
-                    <button id=btnBack class="wr-btn" onclick="window.location.href='/emm/platform-configuration'">Go back to configurations</button>
-                    <button id=btnExit class="wr-btn" onclick="window.location.href='/emm'">&nbsp;&nbsp;&nbsp;&nbsp;Exit&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button id=btnBack class="wr-btn" onclick="window.location.href='/emm/platform-configuration'">返回</button>
+                    <button id=btnExit class="wr-btn" onclick="window.location.href='/emm'">&nbsp;&nbsp;&nbsp;&nbsp;退出&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
             </div>
             <!-- /content -->

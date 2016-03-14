@@ -18,7 +18,7 @@
                             <i class="fw fw-ring fw-stack-2x"></i>
                             <i class="fw fw-left-arrow fw-stack-1x"></i>
                         </span>
-                        Go Back
+                        返回
                     </a><!--
              -->{{/if}}<!--
              -->{{#each currentActions}}<!--
@@ -43,7 +43,7 @@
                             <i class="fw fw-bpmn fw-stack-1-5x"></i>
                         </span>
                         &nbsp;
-                        Enroll Device
+                        注册设备
                     </a>
                 {{/equal}}
             </div>
@@ -58,23 +58,23 @@
             {{defineZone "common-navigation"}}
 
             {{#if permissions.VIEW_DASHBOARD}}
-                <li><a href="/emm"><i class="fw fw-dashboard"></i>Admin Dashboard</a></li>
+                <li><a href="/emm"><i class="fw fw-dashboard"></i>主面板</a></li>
             {{/if}}
             {{#if permissions.LIST_DEVICES}}
-                <li><a href="/emm/device-mgt"><i class="fw fw-mobile"></i>Device Management</a></li>
+                <li><a href="/emm/device-mgt"><i class="fw fw-mobile"></i>设备管理</a></li>
             {{/if}}
             {{#if permissions.LIST_USERS}}
-                <li><a href="/emm/users"><i class="fw fw-user"></i>User Management</a></li>
+                <li><a href="/emm/users"><i class="fw fw-user"></i>用户管理</a></li>
             {{/if}}
 
             {{#if permissions.LIST_ROLES}}
-                <li><a href="/emm/roles"><i class="fw fw-bookmark"></i>Role Management</a></li>
+                <li><a href="/emm/roles"><i class="fw fw-bookmark"></i>角色管理</a></li>
             {{/if}}
             {{#if permissions.LIST_POLICIES}}
-                <li><a href="/emm/policies"><i class="fw fw-policy"></i>Policy Management</a></li>
+                <li><a href="/emm/policies"><i class="fw fw-policy"></i>策略管理</a></li>
             {{/if}}
             {{#if permissions.TENANT_CONFIGURATION}}
-                <li><a href="/emm/platform-configuration"><i class="fw fw-settings"></i>Platform Configurations</a></li>
+                <li><a href="/emm/platform-configuration"><i class="fw fw-settings"></i>平台配置</a></li>
             {{/if}}
         </ul>
     </div>
@@ -86,10 +86,10 @@
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
                     <h3>
-                        Scan QR code to start enrollment
+                        扫描二维码注册设备
                     </h3>
                     <h4>
-                        Please scan the QR code using your mobile device to retrieve enrollment URL.
+                        请用你的移动设备扫描二维码获取注册地址。
                     </h4>
 
                     <div class="panel panel-default">

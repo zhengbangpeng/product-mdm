@@ -97,7 +97,7 @@ $.fn.datatables_extended = function(settings){
                     }
                     else if (filterColumn.eq(column.index()).hasClass('text-filter')) {
                         var title = filterColumn.eq(column.index()).attr('data-for');
-                        $(filterColumn.eq(column.index()).empty()).html('<input type="text" class="form-control" placeholder="Search ' + title + '" />');
+                        $(filterColumn.eq(column.index()).empty()).html('<input type="text" class="form-control" placeholder="搜索 ' + title + '" />');
 
                         filterColumn.eq(column.index()).find('input').on('keyup change', function () {
                             column.search($(this).val()).draw();
@@ -120,7 +120,7 @@ $.fn.datatables_extended = function(settings){
                 /**
                  *  create sorting dropdown menu for list table advance operations
                  */
-                var dropdownmenu = $('<ul class="dropdown-menu arrow arrow-top-right dark sort-list add-margin-top-2x"><li class="dropdown-header">Sort by</li></ul>');
+                var dropdownmenu = $('<ul class="dropdown-menu arrow arrow-top-right dark sort-list add-margin-top-2x"><li class="dropdown-header">排序</li></ul>');
                 $('.sort-row th', elem).each(function(){
                     if(!$(this).hasClass('no-sort')){
                         dropdownmenu.append('<li><a href="#' + $(this).html() + '" data-column="' + $(this).index() + '">' + $(this).html() + '</a></li>');
@@ -132,7 +132,7 @@ $.fn.datatables_extended = function(settings){
                  */
                 $('.dataTable.list-table').closest('.dataTables_wrapper').find('.dataTablesTop .dataTables_toolbar').html('' +
                         '<ul class="nav nav-pills navbar-right remove-margin" role="tablist">' +
-                        '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary">Select All</li>' +
+                        '<li><button data-click-event="toggle-selected" id="dt-select-all" class="btn btn-default btn-primary">全选</li>' +
                         '<li><button data-click-event="toggle-list-view" data-view="grid" class="btn btn-default"><i class="fw fw-grid"></i></button></li>' +
                         '<li><button data-click-event="toggle-list-view" data-view="list" class="btn btn-default"><i class="fw fw-list"></i></button></li>' +
                         '<li><button class="btn btn-default" data-toggle="dropdown"><i class="fw fw-sort"></i></button>'+dropdownmenu[0].outerHTML+'</li>' +
@@ -170,16 +170,16 @@ $.fn.datatables_extended = function(settings){
                     var button = this,
                         thisTable = $(this).closest('.dataTables_wrapper').find('.dataTable').dataTable();
 
-                    if($(button).html() == 'Select All') {
+                    if($(button).html() == '全选') {
                         thisTable.api().rows().every(function () {
                             $(this.node()).addClass(rowSelectedClass);
-                            $(button).html('Deselect All');
+                            $(button).html('全部取消');
                         });
                     }
-                    else if($(button).html() == 'Deselect All') {
+                    else if($(button).html() == '全部取消') {
                         thisTable.api().rows().every(function () {
                             $(this.node()).removeClass(rowSelectedClass);
-                            $(button).html('Select All');
+                            $(button).html('全选');
                         });
                     }
                 });
@@ -195,7 +195,7 @@ $.fn.datatables_extended = function(settings){
 
                     thisTable.api().rows().every(function () {
                         if(!$(this.node()).hasClass(rowSelectedClass)){
-                            $(button).closest('.dataTables_wrapper').find('[data-click-event=toggle-selected]').html('Select All');
+                            $(button).closest('.dataTables_wrapper').find('[data-click-event=toggle-selected]').html('全选');
                         }
                     });
                 });

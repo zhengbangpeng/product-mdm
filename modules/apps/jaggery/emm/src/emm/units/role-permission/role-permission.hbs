@@ -5,8 +5,8 @@
             <!-- content -->
             <div id="role-create-form" class="container col-centered wr-content">
                 <div class="wr-form">
-                    <p class="page-sub-title">Change Role permissions</p>
-                    <p>Please note that * sign represents required fields of data.</p>
+                    <p class="page-sub-title">修改角色权限</p>
+                    <p>请注意 * 为必填选项</p>
                     <hr />
                     <div class="row">
                         <div class="col-lg-8">
@@ -17,29 +17,29 @@
                                 <div id="loading-content" class="col-centered">
                                     <i class="fw fw-settings fw-spin fw-2x"></i>
                                     &nbsp;&nbsp;&nbsp;
-                                    Loading permissions list . . .
+                                    加载权限列表 . . .
                                     <br>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <br>
-                    <button id="update-permissions-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;Update Role Permissions&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button id="update-permissions-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;更新角色权限&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
             </div>
             <div id="role-created-msg" class="container col-centered wr-content hidden">
                 <div class="wr-form">
-                    <p class="page-sub-title">Permissions were assigned to the role successfully.</p>
-                    <br>Please click <b>"Add Another Role"</b>, if you wish to add another role or click
-                    <b>"View Role List"</b> to complete the process and go back to the role list.
+                    <p class="page-sub-title">权限分配成功</p>
+                    <br>继续添加角色，请点击 <b>"添加角色"</b>,
+                    返回角色列表，请点击<b>"角色列表"</b>
                     <hr />
-                    <button class="wr-btn" onclick="window.location.href='/emm/roles'">View Role List</button>
+                    <button class="wr-btn" onclick="window.location.href='/emm/roles'">角色列表</button>
                     <a href="/emm/roles/add-role" class="cu-btn-inner">
                         <span class="fw-stack">
                             <i class="fw fw-ring fw-stack-2x"></i>
                             <i class="fw fw-add fw-stack-1x"></i>
                         </span>
-                        Add Another Role
+                        添加角色
                     </a>
                 </div>
             </div>
@@ -47,10 +47,10 @@
                                 <div class="content">
                                     <div class="row">
                                         <div class="col-lg-5 col-md-6 col-centered">
-                                            <h3>Can't deselect child permissions when parent permission is selected.</h3>
+                                            <h3>在取消子权限前，请先取消父权限</h3>
                                             <div class="buttons">
                                                 <a href="#" id="child-deselect-error-link" class="btn-operations">
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </a>
                                             </div>
                                         </div>

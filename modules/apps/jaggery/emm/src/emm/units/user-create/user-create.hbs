@@ -5,8 +5,8 @@
             <!-- content -->
             <div id="user-create-form" class="container col-centered wr-content">
                 <div class="wr-form">
-                    <p class="page-sub-title">Add User</p>
-                    <p>Please note that * sign represents required fields of data.</p>
+                    <p class="page-sub-title">添加用户</p>
+                    <p>请注意 * 为必填选项</p>
                     <hr />
                     <div class="row">
                         <div class="col-lg-8">
@@ -26,29 +26,29 @@
                                 </select>
                             </div>
                             <label class="wr-input-label">
-                                User Name * <br>
-                                ( should be in minimum 3 characters long and do not include any whitespaces or special characters )
+                                用户名 * <br>
+                                ( 长度至少为3，不能包含空格和特殊字符 )
                             </label>
                             <div class="wr-input-control">
-                                <input limit="{{charLimit}}" type="text" id="username" class="form-control" placeholder="[ Required field ]"/>
+                                <input limit="{{charLimit}}" type="text" id="username" class="form-control" placeholder="[ 必填 ]"/>
                             </div>
-                            <label class="wr-input-label">First Name *</label>
+                            <label class="wr-input-label">名 *</label>
                             <div class="wr-input-control">
-                                <input type="text" id="firstname" class="form-control" placeholder="[ Required field ]"/>
+                                <input type="text" id="firstname" class="form-control" placeholder="[ 必填 ]"/>
                             </div>
-                            <label class="wr-input-label">Last Name *</label>
+                            <label class="wr-input-label">姓 *</label>
                             <div class="wr-input-control">
-                                <input type="text" id="lastname" class="form-control" placeholder="[ Required field ]"/>
+                                <input type="text" id="lastname" class="form-control" placeholder="[ 必填 ]"/>
                             </div>
                             <label class="wr-input-label">
-                                Email Address * <br>
-                                ( ex: sam@gmail.com )
+                                Email * <br>
+                                ( 例: sam@gmail.com )
                             </label>
                             <div class="wr-input-control">
-                                <input type="email" id="emailAddress" class="form-control" placeholder="[ Required field ]"/>
+                                <input type="email" id="emailAddress" class="form-control" placeholder="[ 必填 ]"/>
                             </div>
-                            <label class="wr-input-label" title="Optional field that can have 0-to-many roles for the user">
-                                User Roles
+                            <label class="wr-input-label" title="选填，0个或多个角色">
+                                用户角色
                                 <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                             </label>
                             <div class="wr-input-control">
@@ -66,26 +66,24 @@
             </div>
             <div id="user-created-msg" class="container col-centered wr-content hidden">
                 <div class="wr-form">
-                    <p class="page-sub-title">User was added successfully.</p>
+                    <p class="page-sub-title">用户添加成功</p>
                     <br>
-                    An invitation mail will be sent to this user to initiate device enrollment.
-                    Below QR code can also be used to enroll a device.
-
+                    邀请邮件已发送给该用户。您也可以直接扫描下面的二维码注册设备。
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="qr-code col-lg-5 col-md-6 col-centered"></div>
                         </div>
                     </div>
-                    <br>Please click <b>"Add Another User"</b>, if you wish to add another user or click
-                    <b>"View User List"</b> to complete the process and go back to the user list.
+                    <br>继续添加用户，请点击 <b>"添加用户"</b>,
+                    返回用户列表，请点击<b>"用户列表"</b>
                     <hr />
-                    <button class="wr-btn" onclick="window.location.href='/emm/users'">View User List</button>
+                    <button class="wr-btn" onclick="window.location.href='/emm/users'">用户列表</button>
                     <a href="/emm/users/add-user" class="cu-btn-inner">
                         <span class="fw-stack">
                             <i class="fw fw-ring fw-stack-2x"></i>
                             <i class="fw fw-add fw-stack-1x"></i>
                         </span>
-                        Add Another User
+                        添加用户
                     </a>
                 </div>
             </div>

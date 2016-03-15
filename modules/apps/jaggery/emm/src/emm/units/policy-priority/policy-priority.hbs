@@ -2,7 +2,7 @@
     <div class="row wr-device-board">
         <div class="col-lg-12 wr-secondary-bar">
             <span class="page-sub-title">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Policy List by priority order
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;策略列表（根据优先级排序）
             </span>
         </div>
     </div>
@@ -50,19 +50,19 @@
                                         {{#if roles}}
                                             <div class="wr-desc-list-configs highlight col-lg-4">
                                                 <div>
-                                                    <b>Assigned Role(s) : </b> {{roles}}
+                                                    <b>分配角色 : </b> {{roles}}
                                                 </div>
                                             </div>
                                         {{else}}
                                             <div class="wr-desc-list-configs highlight col-lg-4">
                                                 <div>
-                                                    <b>Assigned User(s) : </b> {{users}}
+                                                    <b>分配用户 : </b> {{users}}
                                                 </div>
                                             </div>
                                         {{/if}}
                                         <div class="wr-desc-list-configs col-lg-4">
                                             <div>
-                                                <b>Compliance Type :</b> {{compliance}}
+                                                <b>推送类型 :</b> {{compliance}}
                                             </div>
                                         </div>
                                     </div>
@@ -73,8 +73,8 @@
                 </div>
                 {{#equal noPolicy false}}
                     <div id="save-new-priorities-button" class="wr-input-control wr-btn-grp">
-                        <button class="wr-btn hide" id="sortUpdateBtn" data-policycount="{{policyCount}}" data-enabled="{{saveNewPrioritiesButtonEnabled}}" disabled>Save New Priority Order</button>
-                        <button class="wr-btn" id="applyChangesBtn">Apply Changes</button>
+                        <button class="wr-btn hide" id="sortUpdateBtn" data-policycount="{{policyCount}}" data-enabled="{{saveNewPrioritiesButtonEnabled}}" disabled>保存排序</button>
+                        <button class="wr-btn" id="applyChangesBtn">保存修改</button>
                     </div>
                 {{/equal}}
             </div>
@@ -86,14 +86,14 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Do you really want to apply changes to all policies?</h3>
+                    <h3>确认保存修改?</h3>
                     <div class="buttons">
                         <a href="javascript:void(0)" id="change-policy-yes-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                         &nbsp;&nbsp;
                         <a href="javascript:void(0)" id="change-policy-cancel-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Cancel&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;取消&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -105,10 +105,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Done. Changes applied successfully.</h3>
+                    <h3>修改成功</h3>
                     <div class="buttons">
                         <a href="javascript:void(0)" id="change-policy-success-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -120,10 +120,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>An unexpected error occurred. Please try again later.</h3>
+                    <h3>修改失败，请稍后再试。</h3>
                     <div class="buttons">
                         <a href="javascript:void(0)" id="change-policy-error-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -135,10 +135,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>An unexpected error occurred. Please try again later.</h3>
+                    <h3>移除失败，请稍后再试。.</h3>
                     <div class="buttons">
                         <a href="javascript:void(0)" id="remove-policy-error-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -150,10 +150,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Done. New Policy priorities were successfully updated.</h3>
+                    <h3>优先级保存成功</h3>
                     <div class="buttons">
                         <a href="javascript:void(0)" id="save-policy-priorities-success-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -165,11 +165,11 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>An unexpected error occurred. Please try again later.</h3>
+                    <h3>保存失败，请稍后再试。.</h3>
                     <h4 class="message-from-server"></h4>
                     <div class="buttons">
                         <a href="javascript:void(0)" id="save-policy-priorities-error-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>

@@ -5,8 +5,8 @@
             <!-- content -->
             <div id="user-create-form" class="container col-centered wr-content">
                 <div class="wr-form">
-                    <p class="page-sub-title">Edit User</p>
-                    <p>Please note that * sign represents required fields of data.</p>
+                    <p class="page-sub-title">编辑用户</p>
+                    <p>请注意 * 为必填选项</p>
                     <hr />
                     <div class="row">
                         <div class="col-lg-8">
@@ -14,28 +14,28 @@
                                 <i class="icon fw fw-error"></i><span></span>
                             </div>
                             <label class="wr-input-label">
-                                User Name * <br>
+                                用户名 * <br>
                             </label>
                             <div class="wr-input-control">
                                 <input type="text" id="username" class="form-control" value="{{editUser.username}}" disabled/>
                             </div>
-                            <label class="wr-input-label">First Name *</label>
+                            <label class="wr-input-label">名 *</label>
                             <div class="wr-input-control">
                                 <input type="text" id="firstname" class="form-control" value="{{editUser.firstname}}"/>
                             </div>
-                            <label class="wr-input-label">Last Name *</label>
+                            <label class="wr-input-label">姓 *</label>
                             <div class="wr-input-control">
                                 <input type="text" id="lastname" class="form-control" value="{{editUser.lastname}}"/>
                             </div>
                             <label class="wr-input-label">
-                                Email Address * <br>
-                                ( ex: sam@gmail.com )
+                                Email * <br>
+                                ( 例: sam@gmail.com )
                             </label>
                             <div class="wr-input-control">
                                 <input type="email" id="emailAddress" class="form-control" value="{{editUser.emailAddress}}"/>
                             </div>
                             <label class="wr-input-label" title="Optional field that can have 0-to-many roles for the user">
-                                User Roles
+                                用户角色
                                 <span class="wr-help-tip glyphicon glyphicon-question-sign"></span>
                             </label>
                             <div class="wr-input-control">
@@ -52,23 +52,23 @@
                         </div>
                     </div>
                     <br>
-                    <button id="add-user-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;Save User&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    <button id="add-user-btn" class="wr-btn">&nbsp;&nbsp;&nbsp;&nbsp;保存&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
             </div>
             <div id="user-created-msg" class="container col-centered wr-content hidden">
                 <div class="wr-form">
-                    <p class="page-sub-title">User was updated successfully.</p>
+                    <p class="page-sub-title">用户更新成功</p>
 
-                    <br>Please click <b>"View Updated User"</b>, if you wish to view the updated user or click
-                    <b>"View User List"</b> to complete the process and go back to the user list.
+                    <br>查看更新用户，请点击 <b>"查看更新用户"</b>,
+                    返回用户列表，请点击<b>"用户列表"</b>
                     <hr />
-                    <button class="wr-btn" onclick="window.location.href='/emm/users'">View User List</button>
+                    <button class="wr-btn" onclick="window.location.href='/emm/users'">用户列表</button>
                     <a href="/emm/users/profile?username={{editUser.username}}" class="cu-btn-inner">
                         <span class="fw-stack">
                             <i class="fw fw-ring fw-stack-2x"></i>
                             <i class="fw fw-add fw-stack-1x"></i>
                         </span>
-                        View Updated User
+                        查看更新用户
                     </a>
                 </div>
             </div>

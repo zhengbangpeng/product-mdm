@@ -2,7 +2,7 @@
     <div class="row wr-device-board">
         <div class="col-lg-12 wr-secondary-bar">
             <span class="page-sub-title">
-                &nbsp;&nbsp;Policy List
+                &nbsp;&nbsp;策略列表
             </span>
         </div>
     </div>
@@ -14,7 +14,7 @@
         <div id="loading-content" class="col-centered">
             <i class="fw fw-settings fw-spin fw-2x"></i>
             &nbsp;&nbsp;&nbsp;
-            Loading policies . . .
+            加载策略中 . . .
             <br>
         </div>
         <span id="policy-listing-status-msg" class="hidden">{{policyListingStatusMsg}}</span>
@@ -24,12 +24,12 @@
             <tr class="sort-row">
                 <th class="no-sort"></th>
                 <th class="no-sort"></th>
-                <th>By Platform</th>
-                <th>By Ownership Type</th>
-                <th>By Role</th>
-                <th>By User</th>
-                <th>By Compliance Type</th>
-                <th>By Status</th>
+                <th>平台</th>
+                <th>所有权</th>
+                <th>角色</th>
+                <th>用户</th>
+                <th>推送类型</th>
+                <th>状态</th>
                 <th class="no-sort"></th>
             </tr>
             <tr class="filter-row filter-box">
@@ -53,7 +53,7 @@
                                                 <i class="fw fw-ring fw-stack-2x"></i>
                                                 <i class="fw fw-delete fw-stack-1x"></i>
                                             </span>
-                                        Remove
+                                        移除
                                     </a>
                                 </li>
                             {{/if}}
@@ -63,7 +63,7 @@
                                             <i class="fw fw-ring fw-stack-2x"></i>
                                             <i class="glyphicon glyphicon-floppy-saved"></i>
                                         </span>
-                                    Publish
+                                    发布
                                 </a>
                             </li>
                             <li class="square">
@@ -72,7 +72,7 @@
                                             <i class="fw fw-ring fw-stack-2x"></i>
                                             <i class="glyphicon glyphicon-floppy-remove"></i>
                                         </span>
-                                    Unpublish
+                                    取消发布
                                 </a>
                             </li>
                         </ul>
@@ -100,16 +100,16 @@
                         <h4>{{name}}</h4>
                         <div>({{platform}})</div>
                         {{#equal status "Active/Updated"}}
-                            <i class="fw fw-warning icon-success"></i> Active/Updated</span>
+                            <i class="fw fw-warning icon-success"></i> 活跃/已更新</span>
                         {{/equal}}
                         {{#equal status "Active"}}
-                            <i class="fw fw-ok icon-success"></i> Active</span>
+                            <i class="fw fw-ok icon-success"></i> 活跃</span>
                         {{/equal}}
                         {{#equal status "Inactive/Updated"}}
-                            <i class="fw fw-warning icon-warning"></i> Inactive/Updated</span>
+                            <i class="fw fw-warning icon-warning"></i> 不活跃/已更新</span>
                         {{/equal}}
                         {{#equal status "Inactive"}}
-                            <i class="fw fw-error icon-danger"></i> Inactive</span>
+                            <i class="fw fw-error icon-danger"></i> 不活跃</span>
                         {{/equal}}
                     </td>
                     <td class="fade-edge remove-padding-top" data-search="{{platform}}" data-display="{{platform}}"></td>
@@ -125,7 +125,7 @@
                                 <i class="fw fw-ring fw-stack-2x"></i>
                                 <i class="fw fw-view fw-stack-1x"></i>
                             </span>
-                            <span class="hidden-xs hidden-on-grid-view">View</span>
+                            <span class="hidden-xs hidden-on-grid-view">查看</span>
                         </a>
 
                         <a href="/emm/policies/view-edit-policy?id={{id}}" data-id="{{id}}" data-click-event="remove-form" class="btn padding-reduce-on-grid-view policy-update-link">
@@ -133,7 +133,7 @@
                                 <i class="fw fw-ring fw-stack-2x"></i>
                                 <i class="fw fw-edit fw-stack-1x"></i>
                             </span>
-                            <span class="hidden-xs hidden-on-grid-view">Re-Configure</span>
+                            <span class="hidden-xs hidden-on-grid-view">修改配置</span>
                         </a>
 
                     </td>
@@ -148,14 +148,14 @@
     <!-- /content -->
 
     <div id="content-filter-types" style="display: none">
-        <div class="sort-title">Sort By</div>
+        <div class="sort-title">排序</div>
         <div class="sort-options">
-            <a href="#">By Platform<span class="ico-sort-asc"></span></a>
-            <a href="#">By Ownership Type</a>
-            <a href="#">By Role</a>
-            <a href="#">By User</a>
-            <a href="#">By Compliance Type</a>
-            <a href="#">By Status</a>
+            <a href="#">平台<span class="ico-sort-asc"></span></a>
+            <a href="#">所有权</a>
+            <a href="#">角色</a>
+            <a href="#">用户</a>
+            <a href="#">发布类型</a>
+            <a href="#">状态</a>
         </div>
     </div>
 
@@ -163,14 +163,14 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Do you really want to remove the selected policy(s)?</h3>
+                    <h3>确认移除所有选中的策略?</h3>
                     <div class="buttons">
                         <a href="#" id="remove-policy-yes-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                         &nbsp;&nbsp;
                         <a href="#" id="remove-policy-cancel-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Cancel&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;取消&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -182,10 +182,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Done. Selected policy was successfully removed.</h3>
+                    <h3>成功移除选中策略</h3>
                     <div class="buttons">
                         <a href="#" id="remove-policy-success-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -197,10 +197,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>An unexpected error occurred. Please try again later.</h3>
+                    <h3>移除失败，请稍后再试。</h3>
                     <div class="buttons">
                         <a href="#" id="remove-policy-error-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -212,10 +212,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>You cannot remove policies that are already applied to devices. Please deselect them and try again.</h3>
+                    <h3>不能移除已发布到设备的策略，请重新选择。</h3>
                     <div class="buttons">
                         <a href="#" id="remove-policy-error-devices" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -227,14 +227,14 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Do you really want to publish the selected policy(s)?</h3>
+                    <h3>确认发布所有选中的策略?</h3>
                     <div class="buttons">
                         <a href="#" id="publish-policy-yes-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                         &nbsp;&nbsp;
                         <a href="#" id="publish-policy-cancel-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Cancel&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;取消&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -246,10 +246,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Done. Selected policy was successfully published.</h3>
+                    <h3>选中策略发布成功</h3>
                     <div class="buttons">
                         <a href="#" id="publish-policy-success-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -261,10 +261,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>An unexpected error occurred. Please try again later.</h3>
+                    <h3>发布失败，请稍后重试。.</h3>
                     <div class="buttons">
                         <a href="#" id="publish-policy-error-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -276,14 +276,14 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Do you really want to unpublish the selected policy(s)?</h3>
+                    <h3>确认取消所有选中策略的发布?</h3>
                     <div class="buttons">
                         <a href="#" id="unpublish-policy-yes-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                         &nbsp;&nbsp;
                         <a href="#" id="unpublish-policy-cancel-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Cancel&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;取消&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -295,10 +295,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Done. Selected policy was successfully unpublished.</h3>
+                    <h3>选中策略取消发布成功</h3>
                     <div class="buttons">
                         <a href="#" id="unpublish-policy-success-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -310,10 +310,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>An unexpected error occurred. Please try again later.</h3>
+                    <h3>取消发布失败，请稍后再试。</h3>
                     <div class="buttons">
                         <a href="#" id="unpublish-policy-error-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -325,10 +325,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Done. New Policy priorities were successfully updated.</h3>
+                    <h3>策略优先级更新成功</h3>
                     <div class="buttons">
                         <a href="#" id="save-policy-priorities-success-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -340,11 +340,11 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>An unexpected error occurred. Please try again later.</h3>
+                    <h3>更新失败，请稍后再试。</h3>
                     <h4 class="message-from-server"></h4>
                     <div class="buttons">
                         <a href="#" id="save-policy-priorities-error-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -356,14 +356,14 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Do you really want to apply changes to all policies?</h3>
+                    <h3>确认修改策略?</h3>
                     <div class="buttons">
                         <a href="#" id="change-policy-yes-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Yes&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                         &nbsp;&nbsp;
                         <a href="#" id="change-policy-cancel-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Cancel&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;取消&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -375,10 +375,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>Done. Changes applied successfully.</h3>
+                    <h3>策略修改成功</h3>
                     <div class="buttons">
                         <a href="#" id="change-policy-success-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -390,10 +390,10 @@
         <div class="content">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-centered">
-                    <h3>An unexpected error occurred. Please try again later.</h3>
+                    <h3>修改失败，请稍后再试。</h3>
                     <div class="buttons">
                         <a href="#" id="change-policy-error-link" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -413,11 +413,11 @@
                         Operation cannot be performed !
                     </h3>
                     <h4>
-                        Please select a policy or a list of policies to unpublish.
+                        请选择一个或多个策略取消发布。
                     </h4>
                     <div class="buttons">
                         <a href="javascript:hidePopup()" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -433,7 +433,7 @@
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-error fw-stack-1x"></i>
                     </span>
-                        Operation cannot be performed !
+                        操作不能进行 !
                     </h3>
                     <h4>
                         You cannot select already inactive policies. Please deselect inactive policies and try again.
@@ -456,14 +456,14 @@
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-error fw-stack-1x"></i>
                     </span>
-                        Operation cannot be performed !
+                        操作不能进行 !
                     </h3>
                     <h4>
-                        You cannot select already active policies. Please deselect active policies and try again.
+                        不能选择活跃策略，请重新选择。.
                     </h4>
                     <div class="buttons">
                         <a href="javascript:hidePopup()" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -479,14 +479,14 @@
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-error fw-stack-1x"></i>
                     </span>
-                        Operation cannot be performed !
+                        操作不能进行 !
                     </h3>
                     <h4>
-                        Please select a policy or a list of policies to publish.
+                        请选择一个或多个策略。
                     </h4>
                     <div class="buttons">
                         <a href="javascript:hidePopup()" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>
@@ -502,14 +502,14 @@
                         <i class="fw fw-ring fw-stack-2x"></i>
                         <i class="fw fw-error fw-stack-1x"></i>
                     </span>
-                        Operation cannot be performed !
+                        操作不能进行 !
                     </h3>
                     <h4>
-                        Please select a policy or a list of policies to remove.
+                        请选择一个或多个策略。
                     </h4>
                     <div class="buttons">
                         <a href="javascript:hidePopup()" class="btn-operations">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </a>
                     </div>
                 </div>

@@ -77,7 +77,7 @@ $(menuButton).click(function(e){
  */
 $('#advance-filter-options input[type=radio]').change(function() {
     if(this.value !== 'devices'){
-        $(searchField).attr('data-placeholder', 'Search '+ this.value + ' ...');
+        $(searchField).attr('data-placeholder', '搜索 '+ this.value + ' ...');
     }
     else {
         $(deviceOptions).show();

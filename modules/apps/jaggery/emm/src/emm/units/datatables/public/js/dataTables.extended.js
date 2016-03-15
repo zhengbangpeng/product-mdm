@@ -37,7 +37,7 @@ $.fn.datatables_extended = function(settings){
                 'lip' +
                 '>',
             language: {
-                searchPlaceholder: 'Search ...',
+                searchPlaceholder: '搜索 ...',
                 search: ''
             },
             initComplete: function(){

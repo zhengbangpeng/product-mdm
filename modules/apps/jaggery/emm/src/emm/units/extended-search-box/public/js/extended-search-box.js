@@ -96,7 +96,7 @@ function containerUpdate(asset){
     +'onclick="selectAsset(this)"'
     +'asset="' + $(asset).attr('asset') + '">'+ $(asset).html() +'</li>'
     +'<a id="goBack" href="javascript:void(0);" onclick="goBack(this); return false;" '
-    +'class="cu-btn" title="Go Back">'
+    +'class="cu-btn" title="返回">'
     +'<span class="fw-stack">'
     +'<i class="fw fw-ring fw-stack-2x"></i>'
     +'<i class="fw fw-left-arrow fw-stack-1x"></i>'

@@ -4,19 +4,19 @@
                     <span class="wr-hidden-operations-icon fw-stack">
                         <i class="fw fw-padlock fw-stack-2x"></i>
                     </span>
-            Security
+            安全
         </a>
         <a href="javascript:void(0)" onclick="showAdvanceOperation('restriction', this)">
                 <span class="wr-hidden-operations-icon fw-stack">
                     <i class="fw fw-settings fw-stack-2x"></i>
                 </span>
-            Restrictions
+            限制
         </a>
         <a href="javascript:void(0)" onclick="showAdvanceOperation('application', this)">
                     <span class="wr-hidden-operations-icon fw-stack">
                         <i class="fw fw-padlock fw-stack-2x"></i>
                     </span>
-            Applications
+            应用
         </a>
         <a href="javascript:void(0)" onclick="showAdvanceOperation('wifi', this)">
                 <span class="wr-hidden-operations-icon fw-stack">
@@ -37,7 +37,7 @@
                                         <i class="fw fw-ring fw-stack-2x"></i>
                                         <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
                                     </span>
-                            Encryption Enable/Disable
+                            加密 启用/不启用
                         </a>
                     </h2>
                 </div>
@@ -45,10 +45,10 @@
                     <div class="wr-input-control">
                         <label class="wr-input-control checkbox">
                             <input type="checkbox" class="operationDataKeys" id="enableEncryption" data-key="enableEncryption" />
-                            <span class="helper" title="Enable Encryption">Enable Encryption<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
+                            <span class="helper" title="Enable Encryption">启用加密<span class="wr-help-tip glyphicon glyphicon-question-sign"></span></span>
                         </label>
                     </div>
-                    <a href="javascript:runOperation('{{features.ENCRYPT_STORAGE.code}}')" class="btn-operations">Configure</a>
+                    <a href="javascript:runOperation('{{features.ENCRYPT_STORAGE.code}}')" class="btn-operations">配置</a>
                 </div>
             </div>
             <div class="panel panel-default operation-data" data-operation="{{features.PASSCODE_POLICY.code}}">
@@ -59,18 +59,18 @@
                                         <i class="fw fw-ring fw-stack-2x"></i>
                                         <i class="fw fw-arrow fw-down-arrow fw-stack-1x"></i>
                                     </span>
-                            Passcode Policy
+                            密码策略
                         </a>
                     </h2>
                 </div>
                 <div id="passCodePolicy" class="panel-collapse panel-body collapse" role="tabpanel" aria-labelledby="passCodePolicy">
 
-                    <label class="wr-input-label col-sm-4" for="maxFailedAttempts">Maximum Failed Attempts</label>
+                    <label class="wr-input-label col-sm-4" for="maxFailedAttempts">最多尝试次数</label>
                     <div class="wr-input-control">
                         <input type="text" class="form-control operationDataKeys" id="maxFailedAttempts" data-key="maxFailedAttempts" placeholder="Enter maximum Failed Attempts">
                     </div>
 
-                    <label class="wr-input-label col-sm-4" for="minLength">Minimum Length</label>
+                    <label class="wr-input-label col-sm-4" for="minLength">最小长度</label>
                     <div class="wr-input-control">
                         <input type="text" class="form-control operationDataKeys" id="minLength" data-key="minLength" placeholder="Enter minimum Length">
                     </div>
